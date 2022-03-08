@@ -1,9 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { View } from "react-native";
+import { View, Text } from "react-native";
+import AppText from "./app/components/AppText";
 
 import React from "react";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function App() {
   return (
@@ -13,27 +15,8 @@ export default function App() {
         justifyContent: "center",
         alignItems: "center",
       }}>
-      <View
-        style={{
-          backgroundColor: "dodgerblue",
-          width: 100,
-          height: 100,
-          padding: 20,
-        }}>
-        <View
-          style={{
-            backgroundColor: "gold",
-            width: 50,
-            height: 50,
-          }}></View>
-      </View>
-      <View
-        style={{
-          backgroundColor: "tomato",
-          height: 100,
-          width: 100,
-          margin: 20,
-        }}></View>
+      <AppText>I love react native</AppText>
+      <MaterialCommunityIcons name="email" size={60} color="dodgerblue" />
     </View>
   );
 }
